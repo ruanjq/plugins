@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流布局插件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+   
+    <style type="text/css">
+        *{
+            margin: 0;padding: 0;
+        }
+        li{list-style: none;}
+        body{font-size: 12px;color:#333;background: #f7f7f7; font-family: '微软雅黑'; line-height: 1;}
+        .masonry-list{width: 800px; margin: 100px auto; position: relative; background: #eee; }
+        .masonry-item{width: 100px;background: #ddd;text-align: center }
+        .masonry-item-1{height: 60px;}
+        .masonry-item-2{height: 60px;}
+        .masonry-item-3{height: 80px;}
+        .masonry-item-4{height: 60px;}
+        .masonry-item-5{height: 150px;}
+        .masonry-item-6{height: 60px;}
+        .masonry-item-7{height: 60px;}
+        .masonry-item-8{height: 40px;}
+        .masonry-item-9{height: 60px;}
+        .masonry-item-10{height: 150px;}
+        .masonry-item-11{height: 60px;}
+        .masonry-item-12{height: 60px;}
+        .js_test{display: block;width: 200px;margin: 0 auto;text-align: center}
+        .masonry-item img{max-width: 100%;}
+    </style>
+</head>
+
+<body>
+        <h2>瀑布流布局插件</h2>
+    <br><br>
+    <a href="javascript:void(0)" class="js_test">动态添加</a>
+    <br>
+    <div class="masonry-list" id="J_masonry_list">
+        
+        <ul>
+            <li class="masonry-item masonry-item-1">
+                1
+            </li>
+            <li class="masonry-item masonry-item-2">
+                2
+            </li>
+            <li class="masonry-item masonry-item-3">
+                3
+            </li>
+            <li class="masonry-item masonry-item-4">
+                4
+            </li>
+            <li class="masonry-item masonry-item-5">
+                5
+            </li>
+            <li class="masonry-item masonry-item-6">
+                6
+            </li>
+            <li class="masonry-item masonry-item-7">
+                7
+            </li>
+            <li class="masonry-item masonry-item-8">
+                8
+            </li>
+            <li class="masonry-item masonry-item-9">
+                9
+            </li>
+            <li class="masonry-item masonry-item-10">
+                10
+            </li>
+            <li class="masonry-item masonry-item-11">
+                11
+            </li>
+            <li class="masonry-item masonry-item-12">
+                12
+            </li>
+            <li class="masonry-item masonry-item-13">
+                13
+            </li>
+            <li class="masonry-item masonry-item-14">
+                14
+            </li>
+            <li class="masonry-item masonry-item-14">
+                15
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./libs/masonry.js"></script>
+    <script type="text/javascript">
+    
+
+    window.onload = function(){
+
+    
+    }
+    
+    $(function(){
+        var m = Marsonry({
+            containerId:'J_masonry_list',
+            selectorItem:'.masonry-item',
+            itemMargin:20,
+            resize:true,
+            after:function(res){
+                console.log(res.col);
+            }
+        });
+         
+        $(".js_test").click(function(){
+            $("#J_masonry_list ul").append('<li class="masonry-item masonry-item-15">15</li> <li class="masonry-item masonry-item-16">16</li>');
+            m.init();
+        });
+    });
+
+
+    </script>
+</body>
+
+</html>

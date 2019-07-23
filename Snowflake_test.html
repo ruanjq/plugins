@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>canvas 雪花飘落</title>
+    <style type="text/css">
+    body {
+        background: #2d0f0f url(./images/smashing.jpg) center center;
+        background-repeat: no-repeat;
+    }
+    .canvas-wrap{
+        width: 100%;overflow: hidden; height: 768px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="canvas-wrap" id="js_luck_draw">
+    </div>
+    <script src="./libs/snowflake.js"></script>
+    <script type="text/javascript">
+        var snowflakeConfig = {
+		    insert:"#js_luck_draw",
+		    snowflakeNum: 50,
+		    hoverSnowflakeNum:150
+		}
+        window.onload = function(){
+            snowflake(snowflakeConfig);
+        }
+    </script>
+</body>
+
+</html>

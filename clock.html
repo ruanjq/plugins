@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>canvas 时钟</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background: #000;
+    }
+    
+    #clock {
+        margin: 80px auto;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <canvas id="clock"></canvas>
+    <script type="text/javascript">
+    window.onload = function() {
+        var clock = document.getElementById("clock");
+        clock.width = 250;
+        clock.height = 250;
+        var ctx = clock.getContext("2d");
+
+        var c = new Clock(clock, ctx);
+        var arras = [];
+        for (var i = 0; i < c.pointsStyle.length; i++) {
+            var t = new DarwTimer(ctx, c.pointsStyle[i].colors, c.pointsStyle[i].width);
+            arras.push(t);
+        }
+
+        start();
+        setInterval(function() {
+            start();
+        }, 1000)
+
+        function start() {
+            ctx.clearRect(0, 0, clock.width, clock.height);
+            c.drawCircle();
+            c.tickMark();
+            arras[0].updateSec();
+            arras[1].updateMin();
+            arras[2].updateHours();
+
+        }
+
+    };
+
+
+
+
+    function Clock(clock, ctx) {
+        this.center_x = clock.width / 2;
+        this.center_y = clock.height / 2;
+        this.radius = this.center_x;
+        this.ctx = ctx;
+        this.pointsStyle = [{
+            colors: '#9a6363',
+            width: 80
+        }, {
+            colors: 'red',
+            width: 90
+        }, {
+            colors: '#009688',
+            width: 100
+        }];
+    }
+
+
+    Clock.prototype.drawCircle = function() {
+        this.ctx.save();
+        this.ctx.translate(this.center_x, this.center_y);
+        this.ctx.beginPath();
+        this.ctx.lineWidth = "1";
+        this.ctx.lineStyle = "#FFF";
+        this.ctx.strokeStyle = "blue";
+        this.ctx.arc(0, 0, this.radius, 0, Math.PI * 2, true);
+        this.ctx.stroke();
+
+        // 表盘中心圆
+        this.ctx.beginPath();
+        this.ctx.fillStyle = "#FFF";
+        this.ctx.arc(0, 0, 8, 0, Math.PI * 2, true);
+        this.ctx.fill();
+        this.ctx.restore();
+    };
+
+
+    // 绘制刻度
+    Clock.prototype.tickMark = function() {
+        this.ctx.save();
+        this.ctx.translate(this.center_x, this.center_y);
+        for (var i = 0; i < 60; i++) {
+            this.ctx.strokeStyle = "red";
+            this.ctx.beginPath();
+            if (i % 5 === 0) {
+                this.ctx.strokeStyle = "#FFF";
+                this.ctx.moveTo(this.radius * 0.85 * Math.cos((i * 6 / 180 * Math.PI)), this.radius * 0.85 * Math.sin((i * 6 / 180 * Math.PI)));
+            } else {
+                this.ctx.moveTo(this.radius * 0.9 * Math.cos((i * 6 / 180 * Math.PI)), this.radius * 0.9 * Math.sin((i * 6 / 180 * Math.PI)));
+            }
+            this.ctx.lineTo(this.radius * Math.cos((i * 6 / 180 * Math.PI)), this.radius * Math.sin((i * 6 / 180 * Math.PI)));
+            this.ctx.closePath();
+            this.ctx.stroke();
+        }
+
+        var number = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];
+        this.ctx.font = "22px Georgia";
+        this.ctx.fillStyle = "#FFF";
+        this.ctx.textAlign="center";
+        this.ctx.textBaseline="middle";
+        for (var i = 0; i < number.length; i++) {
+            this.ctx.fillText(number[i], this.radius * 0.75 * Math.cos((i * 30 / 180 * Math.PI)), this.radius * 0.75 * Math.sin((i * 30 / 180 * Math.PI)));
+        }
+
+        this.ctx.restore();
+    };
+
+
+
+    function DarwTimer(ctx, colors, width) {
+        this.ctx = ctx;
+        this.ctx.strokeStyle = colors;
+    }
+
+    DarwTimer.prototype.updateSec = function() {
+        var date = new Date();
+        var s = date.getSeconds();
+        this.ctx.save();
+        this.ctx.translate(125, 125);
+        this.ctx.beginPath();
+        this.ctx.rotate(s / 30 * Math.PI);
+        this.ctx.moveTo(0, 20);
+        this.ctx.lineWidth = "5";
+        this.ctx.lineTo(0, -100);
+        this.ctx.stroke();
+        this.ctx.closePath();
+        this.ctx.restore();
+    };
+
+    DarwTimer.prototype.updateHours = function() {
+        var h = new Date().getHours();
+        var m = new Date().getMinutes();
+        this.ctx.beginPath();
+        this.ctx.save();
+        this.ctx.translate(125, 125);
+        this.ctx.rotate((h + m / 60) % 12 / 6 * Math.PI);
+        this.ctx.moveTo(0, 20);
+        this.ctx.strokeStyle = "red";
+        this.ctx.lineWidth = "5";
+        this.ctx.lineTo(0, -60);
+        this.ctx.stroke();
+        this.ctx.closePath();
+        this.ctx.restore();
+    };
+    DarwTimer.prototype.updateMin = function() {
+        var m = new Date().getMinutes();
+        this.ctx.save();
+        this.ctx.translate(125, 125);
+        this.ctx.beginPath();
+        this.ctx.rotate(m / 30 * Math.PI);
+        this.ctx.moveTo(0, 20);
+        this.ctx.strokeStyle = "yellow";
+        this.ctx.lineWidth = "5";
+        this.ctx.lineTo(0, -80);
+        this.ctx.stroke();
+        this.ctx.closePath();
+        this.ctx.restore();
+    };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+		body{font-size: 12px;font-family: '微软雅黑';background: #f7f7f7;}
+		.scroll-body-wrapper{width: 600px;margin: 100px auto;border:1px solid red;overflow: hidden;font-size: 14px;color: #333}
+		.srcoll-body {height: 130px;overflow: hidden}
+		.srcoll-body li{height: 26px;line-height: 26px;padding-left: 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+	</style>
+</head>
+<body>
+	
+	<div class="scroll-body-wrapper">
+		<div class="srcoll-body" id="J_scroll_body">
+			<ul>
+				<li>我是滚动内容1</li>
+				<li>我是滚动内容2</li>
+				<li>我是滚动内容3</li>
+				<li>我是滚动内容4</li>
+				<li>我是滚动内容5</li>
+				<li>我是滚动内容6</li>
+				<li>我是滚动内容7</li>
+				<li>我是滚动内容8</li>
+				<li>我是滚动内容99</li>
+				<li>我是滚动内容999</li>
+				<li>我是滚动内容23</li>
+				<li>我是滚动内容qweq</li>
+				<li>我是滚动内容qweqweqw</li>
+				<li>RG-法语站coupon-shop页面banner更换</li>
+				<li>网址：https://fr.rosegal.com/coupon-shop/</li>
+				<li>PC在线图片：https://uidesign.rglcdn.com/RG/image/other/20180115_2174/1206x301.jpg</li>
+				<li>M在线图片：https://uidesign.rglcdn.com/RG/image/other/20180115_2174/750x300.jpg</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="./libs/marquee.js"></script>
+	<script type="text/javascript">
+		var marquee = new Marquee({
+			dom:"#J_scroll_body",
+			visible:5,
+			speed:20
+		});
+
+		marquee.init();
+
+
+	</script>	
+</body>
+</html>

@@ -4,20 +4,20 @@
 
 - ### [1:基于canvas 绘制动态时钟](https://ruanjq.github.io/plugins/clock.html)
 
-[canvas 时钟](https://raw.githubusercontent.com/ruanjq/plugins/master/images/clock.gif)
+![canvas 时钟](https://raw.githubusercontent.com/ruanjq/plugins/master/images/clock.gif)
 
 
 
 - ### [2:canvas+svg 绘制生日蛋糕表白爱心](https://ruanjq.github.io/plugins/birthday.html)
 
-[绘制生日蛋糕表白爱心](https://raw.githubusercontent.com/ruanjq/plugins/master/images/heart.png)
+![绘制生日蛋糕表白爱心](https://raw.githubusercontent.com/ruanjq/plugins/master/images/heart.png)
 
 
 
 
 - ### [3:canvas 圣诞节雪花效果](https://ruanjq.github.io/plugins/snowflake.html)
 
-[圣诞节雪花效果](https://raw.githubusercontent.com/ruanjq/plugins/master/images/snowflake.png)
+![圣诞节雪花效果](https://raw.githubusercontent.com/ruanjq/plugins/master/images/snowflake.png)
 #### 调用示例
 
 ```javascript
@@ -50,7 +50,7 @@ window.onload = function(){
 <br>
 - ### [4:原生js 瀑布流布局插件](https://ruanjq.github.io/plugins/masonry.html)
 
-[原生js 瀑布流布局插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/masonry.png)
+![原生js 瀑布流布局插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/masonry.png)
 #### 调用示例
 
 ```javascript
@@ -91,7 +91,7 @@ Marsonry({
 <br>
 - ### [5:原生js 抽奖列表滚动插件](https://ruanjq.github.io/plugins/marquee.html)
 
-[原生js 抽奖列表滚动插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/marquee.gif)
+![原生js 抽奖列表滚动插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/marquee.gif)
 
 #### 调用示例
 

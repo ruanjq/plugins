@@ -37,28 +37,11 @@ window.onload = function(){
 
 ### snowflake 参数说明
 |属性名称|类型|是否可选|说明|
-|:--------:|:-----:|:----:|:----:|:----:|
-|insert|string|必填|父容器id 选择器|
-|snowflakeNum|number|必填|初始化雪花数量|
-|hoverSnowflakeNum|number|必填|鼠标悬浮最大飘落的雪花数量|
+|:--:|:--:|:--:|:--:|:--:|
+|insert|`string`|必填|父容器id 选择器|
+|snowflakeNum|`number`|必填|初始化雪花数量|
+|hoverSnowflakeNum|`number`|必填|鼠标悬浮最大飘落的雪花数量|
                     
-
-### 主要参数说明
-|属性名称|类型|是否可选|默认值|说明|
-|:--|:--|:--|:--:|:--|
-|id|`string`|必填|-|插件编号|
-|type|`string`|必填|-|插件类型，必填`SendToMessenger`|
-|pageId|`string`|选填|-|当你需要此插件和初始化时设置的页面编号不同时，填入此项|
-|color|`string`|选填|`'blue'`|主题颜色，待选值为`'blue' \| 'white'`|
-|size|`string`|选填|`'large'`|插件大小，待选值为`'standard' \| 'large' \| 'xlarge'`|
-|enforceLogin|`boolean`|选填|`false`|如果为`true`，则点击该按钮时，已登录用户也必须重新登录|
-|ctaText|`string`|选填|-|显示在按钮中的文本，具体内容见下面的列表|
-|position|`function`|选填|-|插件插入页面位置，当你无法在页面中添加对应插件编号的元素时可以使用此函数来定位，插件将会添加在该函数返回元素的后面。|
-|message|`object` \| `function`|选填|-|点击按钮后向后端发送的数据|
-|click|`function`|选填|-|点击按钮的回调函数。注：此回调和后端发送消息是相互独立的，不存在先后顺序。如果您还未登录 Facebook，点击此按钮也会立即触发此事件。|
-|login|`function`|选填|-|用户登录或者是切换登录账号成功时触发此事件。|
-|notYou|`function`|选填|-|用户点击插件下方`not_you`按钮时触发此事件。|
-|rendered|`function`|选填|-|渲染完成的回调函数|
 
 
 
@@ -93,12 +76,12 @@ Marsonry({
                     
 ### Marsonry 参数说明
 |属性名称|类型|是否可选|说明|
-|:--------:|:-----:|:----:|:----:|:----:|
-|containerId |string|必填|父容器id 选择器|
-|selectorItem|string|必填|瀑布流子项选择器|
-|itemMargin|number|可选|左右边距|
-|resize|boolean|可选|resize 事件是否重新调整布局|
-|after|function|可选|渲染完成的回调函数|
+|:--:|:--:|:--:|:--:|:--:|
+|containerId|`string`|必填|父容器`id` 选择器|
+|selectorItem|`string`|必填|瀑布流子项选择器|
+|itemMargin|`number`|可选|左右边距|
+|resize|`boolean`|可选|`resize` 事件是否重新调整布局|
+|after|`function`|可选|渲染完成的回调函数|
                     
 
 
@@ -133,10 +116,10 @@ marquee.init();
 
 ### Marquee 参数说明
 |属性名称|类型|是否可选|说明|
-|:--------:|:-----:|:----:|:----:|:----:|
-|dom|string|必填|父容器id 选择器|
-|visible|number|必填|可视高度区域内看到的行数|
-|speed|number|必填|滚动速度，数值越大，滚动越慢|
+|:--:|:--:|:--:|:--:|:--:|
+|dom|`string`|必填|父容器id 选择器|
+|visible|`number`|必填|可视高度区域内看到的行数|
+|speed|`number`|必填|滚动速度，数值越大，滚动越慢|
                     
 
 

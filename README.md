@@ -37,7 +37,7 @@ window.onload = function(){
 
 ### snowflake 参数说明
 |属性名称|类型|是否可选|说明|
-|:--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--|
 |insert|`string`|必填|父容器id 选择器|
 |snowflakeNum|`number`|必填|初始化雪花数量|
 |hoverSnowflakeNum|`number`|必填|鼠标悬浮最大飘落的雪花数量|
@@ -76,7 +76,7 @@ Marsonry({
                     
 ### Marsonry 参数说明
 |属性名称|类型|是否可选|说明|
-|:--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--|
 |containerId|`string`|必填|父容器`id` 选择器|
 |selectorItem|`string`|必填|瀑布流子项选择器|
 |itemMargin|`number`|可选|左右边距|
@@ -116,7 +116,7 @@ marquee.init();
 
 ### Marquee 参数说明
 |属性名称|类型|是否可选|说明|
-|:--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--|
 |dom|`string`|必填|父容器id 选择器|
 |visible|`number`|必填|可视高度区域内看到的行数|
 |speed|`number`|必填|滚动速度，数值越大，滚动越慢|

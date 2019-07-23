@@ -1,16 +1,23 @@
 # [一些实用创意的小工具插件集](https://ruanjq.github.io/plugins/)
-<br>
+
+
+
 - ### [1:基于canvas 绘制动态时钟](https://ruanjq.github.io/plugins/clock.html)
-![canvas 时钟](https://github.com/ruanjq/plugins/blob/master/images/clock.gif?raw=true)
 
-<br>
+[canvas 时钟](https://raw.githubusercontent.com/ruanjq/plugins/master/images/clock.gif)
+
+
+
 - ### [2:canvas+svg 绘制生日蛋糕表白爱心](https://ruanjq.github.io/plugins/birthday.html)
-![绘制生日蛋糕表白爱心](https://github.com/ruanjq/plugins/blob/master/images/heart.png?raw=true)
 
-<br>
+[绘制生日蛋糕表白爱心](https://raw.githubusercontent.com/ruanjq/plugins/master/images/heart.png)
+
+
+
+
 - ### [3:canvas 圣诞节雪花效果](https://ruanjq.github.io/plugins/snowflake.html)
-![绘制生日蛋糕表白爱心](https://github.com/ruanjq/plugins/blob/master/images/snowflake.png?raw=true)
 
+[圣诞节雪花效果](https://raw.githubusercontent.com/ruanjq/plugins/master/images/snowflake.png)
 #### 调用示例
 
 ```javascript
@@ -42,7 +49,8 @@ window.onload = function(){
 
 <br>
 - ### [4:原生js 瀑布流布局插件](https://ruanjq.github.io/plugins/masonry.html)
-![原生js 瀑布流布局插件](https://github.com/ruanjq/plugins/blob/master/images/masonry.png?raw=true)
+
+[原生js 瀑布流布局插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/masonry.png)
 #### 调用示例
 
 ```javascript
@@ -59,11 +67,11 @@ Marsonry({
 ```html
 <div class="masonry-list" id="J_masonry_list">
 	<ul>
-	<li class="masonry-item masonry-item-1">1</li>
-	<li class="masonry-item masonry-item-2">2</li>
-	<li class="masonry-item masonry-item-3">3</li>
-	<li class="masonry-item masonry-item-4">4</li>
-	<li class="masonry-item masonry-item-5">5</li>
+    <li class="masonry-item masonry-item-1">1</li>
+    <li class="masonry-item masonry-item-2">2</li>
+    <li class="masonry-item masonry-item-3">3</li>
+    <li class="masonry-item masonry-item-4">4</li>
+    <li class="masonry-item masonry-item-5">5</li>
 	</ul>
 </div>
 ```
@@ -82,7 +90,8 @@ Marsonry({
 
 <br>
 - ### [5:原生js 抽奖列表滚动插件](https://ruanjq.github.io/plugins/marquee.html)
-![原生js 抽奖列表滚动插件](https://github.com/ruanjq/plugins/blob/master/images/marquee.gif?raw=true)
+
+[原生js 抽奖列表滚动插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/marquee.gif)
 
 #### 调用示例
 
@@ -98,13 +107,13 @@ marquee.init();
 ```html
 <div class="srcoll-body" id="J_scroll_body">
 	<ul>
-	<li>滚动内容1</li>
-	<li>滚动内容2</li>
-	<li>滚动内容3</li>
-	<li>滚动内容4</li>
-	<li>滚动内容5</li>
-	<li>滚动内容6</li>
-	<li>滚动内容7</li>
+    <li>滚动内容1</li>
+    <li>滚动内容2</li>
+    <li>滚动内容3</li>
+    <li>滚动内容4</li>
+    <li>滚动内容5</li>
+    <li>滚动内容6</li>
+    <li>滚动内容7</li>
 	</ul>
 </div>
 ```

@@ -18,12 +18,12 @@
 - ### [3:canvas 圣诞节雪花效果](https://ruanjq.github.io/plugins/snowflake.html)
 
 ![圣诞节雪花效果](https://raw.githubusercontent.com/ruanjq/plugins/master/images/snowflake.png)
-#### 调用示例
 
+#### 调用示例
 ```javascript
 var snowflakeConfig = {
 	insert:"#js_christmas",
-	snowflakeNum: 50,
+	snowflakeNum:50,
 	hoverSnowflakeNum:150
 }
 window.onload = function(){
@@ -36,12 +36,11 @@ window.onload = function(){
 ```
 
 ### snowflake 参数说明
-
-| 属性名称        | 类型   |  是否可选  | 说明 | 
-| :--------:   |:-----:  | :----:  | :----: | :----: |
-| insert      | string   |   必填     | 父容器id 选择器 | 
-| snowflakeNum        |   number   |   必填   | 初始化雪花数量 | 
-| hoverSnowflakeNum        |    number    |  必填  | 鼠标悬浮最大飘落的雪花数量 |
+|属性名称|类型|是否可选|说明|
+|:--------:|:-----:|:----:|:----:|:----:|
+|insert|string|必填|父容器id 选择器|
+|snowflakeNum|number|必填|初始化雪花数量|
+|hoverSnowflakeNum|number|必填|鼠标悬浮最大飘落的雪花数量|
                     
 
 
@@ -51,8 +50,8 @@ window.onload = function(){
 - ### [4:原生js 瀑布流布局插件](https://ruanjq.github.io/plugins/masonry.html)
 
 ![原生js 瀑布流布局插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/masonry.png)
-#### 调用示例
 
+#### 调用示例
 ```javascript
 Marsonry({
 	containerId:'J_masonry_list',
@@ -77,14 +76,13 @@ Marsonry({
 ```
                     
 ### Marsonry 参数说明
-
-| 属性名称        | 类型   |  是否可选  | 说明 | 
-| :--------:   |:-----:  | :----:  | :----: | :----: |
-| containerId      | string   |   必填     | 父容器id 选择器 | 
-| selectorItem        |   string   |   必填   | 瀑布流子项选择器 | 
-| itemMargin        |    number    |  可选  | 左右边距 |
-| resize        |    boolean    |  可选  | resize 事件是否重新调整布局 |
-| after        |    function    |  可选  | 渲染完成的回调函数  |
+|属性名称|类型|是否可选|说明|
+|:--------:|:-----:|:----:|:----:|:----:|
+|containerId |string|必填|父容器id 选择器|
+|selectorItem|string|必填|瀑布流子项选择器|
+|itemMargin|number|可选|左右边距|
+|resize|boolean|可选|resize 事件是否重新调整布局|
+|after|function|可选|渲染完成的回调函数|
                     
 
 
@@ -94,7 +92,6 @@ Marsonry({
 ![原生js 抽奖列表滚动插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/marquee.gif)
 
 #### 调用示例
-
 ```javascript
 var marquee = new Marquee({
 	dom:"#J_scroll_body",
@@ -119,12 +116,11 @@ marquee.init();
 ```
 
 ### Marquee 参数说明
-
-| 属性名称        | 类型   |  是否可选  | 说明 | 
-| :--------:   |:-----:  | :----:  | :----: | :----: |
-| dom      | string   |   必填     | 父容器id 选择器 | 
-| visible        |   number   |   必填   | 可视高度区域内看到的行数 | 
-| speed        |    number    |  必填  | 滚动速度，数值越大，滚动越慢 |
+|属性名称|类型|是否可选|说明|
+|:--------:|:-----:|:----:|:----:|:----:|
+|dom|string|必填|父容器id 选择器|
+|visible|number|必填|可视高度区域内看到的行数|
+|speed|number|必填|滚动速度，数值越大，滚动越慢|
                     
 
 

@@ -45,7 +45,6 @@ window.onload = function(){
 
 
 
-<br>
 - ### [4:原生js 瀑布流布局插件](https://ruanjq.github.io/plugins/masonry.html)
 
 ![原生js 瀑布流布局插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/masonry.png)
@@ -85,7 +84,6 @@ Marsonry({
                     
 
 
-<br>
 - ### [5:原生js 抽奖列表滚动插件](https://ruanjq.github.io/plugins/marquee.html)
 
 ![原生js 抽奖列表滚动插件](https://raw.githubusercontent.com/ruanjq/plugins/master/images/marquee.gif)

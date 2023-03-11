@@ -302,9 +302,14 @@
 		}
 
 		function showMessages() {
-			setTimeout(() => {
+			if(clientWidth >= 1024){
+				adjustWordsPosition();
+			} else {
+				setTimeout(() => {
 				adjustWordsPosition();
 			}, 8000)
+			}
+		
 			
 		}
 
